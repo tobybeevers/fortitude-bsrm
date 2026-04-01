@@ -569,13 +569,12 @@ p:last-child { margin-bottom: 0; }
   border-left: 1px solid var(--gold-border);
 }
 .footer-certs img {
-  height: 28px;
+  height: 36px;
   width: auto;
-  opacity: 0.4;
+  opacity: 0.75;
   transition: opacity var(--ease);
-  filter: grayscale(20%);
 }
-.footer-certs img:hover { opacity: 0.75; }
+.footer-certs img:hover { opacity: 1; }
 .footer-tagline {
   font-size: 0.65rem;
   letter-spacing: 0.22em;
