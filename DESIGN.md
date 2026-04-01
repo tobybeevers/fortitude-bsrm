@@ -80,7 +80,7 @@ A 36px × 1px gold horizontal line (`<div class="rule">`). Used as a visual paus
 ### Credentials Panel (About section)
 A bordered panel with a header row and stacked credential rows. Each row has a gold label above a description. Deliberately table-like — reads as a formal record, not a marketing list.
 
-SIRA and SIA rows include a circular logo on the right (`cred-row-logo` — 44×44px, `border-radius: 50%`, `object-fit: cover`, `opacity: 0.75`). Uses a flex layout: `.cred-row-content` (text, `flex: 1`) + `.cred-row-logo` (image, `flex-shrink: 0`).
+SIRA and SIA rows include a circular logo on the right (`cred-row-logo` — 44×44px, `border-radius: 50%`, `object-fit: cover`, `opacity: 0.75`). Uses a flex layout: `.cred-row-content` (text, `flex: 1`) + `.cred-row-logo` (image, `flex-shrink: 0`). All rows (including rows 3–5 without logos) use `.cred-row-content` to keep title and description stacked vertically. The SIRA logo in the credentials panel has `transform: rotate(-90deg)` applied inline.
 
 ### Service Items
 Full-width rows with a left column (index number + service label) and right column (title, description, bullet points). Index numbers are deliberately low-opacity — structural, not decorative. Bullet points use an em-dash (`—`) in gold rather than standard list markers.

@@ -66,7 +66,7 @@ Mobile: hamburger menu collapses to full-screen overlay.
 
 | Row | Title                         | Description                                                        | Logo        | Status |
 |-----|-------------------------------|--------------------------------------------------------------------|-------------|--------|
-| 1   | SIRA Security Manager         | Certified by the Security Industry Regulatory Agency. Full UAE compliance. | SIRA.png | Live |
+| 1   | SIRA Security Manager         | Certified by the Security Industry Regulatory Agency. Full UAE compliance. | SIRA.png (rotated -90°) | Live |
 | 2   | SIA Close Protection Licence  | 13+ years licensed under the UK Security Industry Authority framework. | SIA.png | Live |
 | 3   | Royal Household Protection    | Long-term appointment as lead protection officer for a senior member of the Saudi Royal Family. | — | Live |
 | 4   | British Special Forces        | Operational background within British Special Forces environments. | — | Live |
