@@ -37,7 +37,7 @@
   overflow: hidden;
   animation: splashFadeIn 0.8s ease forwards;
 }
-#splash img {
+#splash video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -56,7 +56,7 @@
   to   { opacity: 0; }
 }
 @media (max-width: 768px) {
-  #splash img { object-position: 60% center; }
+  #splash video { object-position: 60% center; }
 }
 
 /* ─── RESET ──────────────────────────────────────────────── */
@@ -570,7 +570,9 @@ p:last-child { margin-bottom: 0; }
 }
 .footer-certs img {
   height: 36px;
-  width: auto;
+  width: 36px;
+  object-fit: cover;
+  border-radius: 50%;
   opacity: 0.75;
   transition: opacity var(--ease);
 }

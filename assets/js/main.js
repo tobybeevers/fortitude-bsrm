@@ -9,17 +9,29 @@
    ─────────────────────────────────────────────────────────── */
 (function initSplash() {
   const splash = document.getElementById('splash');
+  const video  = document.getElementById('splash-video');
   if (!splash) return;
 
   document.body.style.overflow = 'hidden';
 
-  setTimeout(function () {
+  function dismiss() {
     splash.classList.add('hiding');
     splash.addEventListener('animationend', function () {
       splash.style.display = 'none';
       document.body.style.overflow = '';
     }, { once: true });
-  }, 2000);
+  }
+
+  if (video) {
+    /* Fade out when video finishes */
+    video.addEventListener('ended', dismiss, { once: true });
+    /* Fallback: if autoplay is blocked or video stalls, dismiss after 10s */
+    var fallback = setTimeout(dismiss, 10000);
+    video.addEventListener('ended', function () { clearTimeout(fallback); }, { once: true });
+  } else {
+    /* No video — fall back to 2s hold */
+    setTimeout(dismiss, 2000);
+  }
 })();
 
 /* ─── CONTACT FORM ───────────────────────────────────────────
