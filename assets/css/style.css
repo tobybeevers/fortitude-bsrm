@@ -31,16 +31,21 @@
 /* ─── SPLASH SCREEN ──────────────────────────────────────── */
 #splash {
   position: fixed;
-  inset: 0;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
   z-index: 200;
   background: #000;
   overflow: hidden;
   animation: splashFadeIn 0.8s ease forwards;
 }
 #splash video {
+  position: absolute;
+  top: 0; left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 @keyframes splashFadeIn {
@@ -55,9 +60,6 @@
   from { opacity: 1; }
   to   { opacity: 0; }
 }
-@media (max-width: 768px) {
-  #splash video { object-position: 60% center; }
-}
 
 /* ─── RESET ──────────────────────────────────────────────── */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -71,6 +73,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+}
+body.splash-active {
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
 }
 img { max-width: 100%; display: block; }
 ul  { list-style: none; }
