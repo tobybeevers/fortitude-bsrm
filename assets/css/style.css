@@ -35,28 +35,28 @@
   z-index: 200;
   background: #000;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  animation: splashFadeIn 0.8s ease forwards;
 }
 #splash img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  animation: splashZoom 2.8s ease forwards;
+  object-position: center center;
 }
-@keyframes splashZoom {
-  from { transform: scale(1);    opacity: 1; }
-  to   { transform: scale(1.07); opacity: 1; }
+@keyframes splashFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 #splash.hiding {
-  animation: splashFade 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation: splashFadeOut 0.9s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   pointer-events: none;
 }
-@keyframes splashFade {
+@keyframes splashFadeOut {
   from { opacity: 1; }
   to   { opacity: 0; }
+}
+@media (max-width: 768px) {
+  #splash img { object-position: 60% center; }
 }
 
 /* ─── RESET ──────────────────────────────────────────────── */
@@ -291,7 +291,6 @@ p:last-child { margin-bottom: 0; }
 .hero h1 {
   max-width: 680px;
   margin-bottom: 2rem;
-  font-style: italic;
   line-height: 1.1;
 }
 .hero h1 em { font-style: normal; color: var(--gold); }
