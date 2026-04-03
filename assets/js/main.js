@@ -23,6 +23,11 @@
   }
 
   if (video) {
+    /* Pick landscape or portrait source based on screen orientation */
+    var isPortrait = window.innerHeight > window.innerWidth;
+    video.src = isPortrait ? video.dataset.mobileSrc : video.dataset.src;
+    video.load();
+
     /* Fade out when video finishes */
     video.addEventListener('ended', dismiss, { once: true });
     /* Fallback: if autoplay is blocked or video stalls, dismiss after 10s */
