@@ -36,7 +36,7 @@
   height: 100vh;
   height: 100dvh;
   z-index: 200;
-  background: #000;
+  background: #0c1022;
   overflow: hidden;
   animation: splashFadeIn 0.8s ease forwards;
 }
