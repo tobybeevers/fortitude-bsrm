@@ -286,10 +286,10 @@ p:last-child { margin-bottom: 0; }
   flex: 1;
   display: flex;
   align-items: center;
-  padding: 5rem 2rem 3rem;
+  padding: 5rem 4rem 3rem;
 }
 .hero-content {
-  max-width: var(--max-w);
+  max-width: 1440px;
   margin: 0 auto;
   width: 100%;
   position: relative;
@@ -297,7 +297,7 @@ p:last-child { margin-bottom: 0; }
 }
 .hero-watermark {
   position: absolute;
-  right: 35%;
+  right: 25%;
   top: 42%;
   transform: translate(50%, -50%);
   z-index: 0;
@@ -329,7 +329,7 @@ p:last-child { margin-bottom: 0; }
   z-index: 1;
 }
 .hero-credentials {
-  max-width: var(--max-w);
+  max-width: 1440px;
   margin: 0 auto;
   display: flex;
   gap: 0;
